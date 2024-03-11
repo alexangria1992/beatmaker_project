@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=!, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Beatmaker</title>
   </head>
   <body>
     <div class="sequencer">
@@ -18,6 +18,7 @@
             <option value="./sounds/kick-classic.wav">Classic Kick</option>
             <option value="./sounds/kick-808.wav">808 Kick</option>
             <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
+            <option value="./sounds/kick-softy.wav">Kick Softy</option>
           </select>
         </div>
         <div class="kick">
@@ -40,7 +41,7 @@
           <select name="snare-select" id="snare-select">
             <option value="./sounds/snare-acoustic01.wav">Classic Snare</option>
             <option value="./sounds/snare-808.wav">808 Snare</option>
-            <option value="./sounds/snare-vinyl102.wav">Snare Vinyl</option>
+            <option value="./sounds/snare-vinyl02.wav">Snare Vinyl</option>
           </select>
         </div>
         <div class="snare">
@@ -61,7 +62,10 @@
             <i class="fas fa-volume-mute"></i>
           </button>
           <select name="hihat-select" id="hihat-select">
-            <option value="./sounds/hihat-acoustic01.wav">808 Hihat</option>
+            <option value="./sounds/hihat-acoustic01.wav">
+              Hihat Acoustic
+            </option>
+            <option value="./sounds/hihat-808.wav">808 Hihat</option>
           </select>
         </div>
         <div class="hihat">
@@ -76,6 +80,16 @@
         </div>
       </div>
       <button class="play">Play</button>
+      <div class="tempo">
+        <input
+          type="range"
+          class="tempo-slider"
+          max="300"
+          min="20"
+          value="150"
+        />
+        <!-- <p>Tempo: <span class="tempo-nr">150</span></p> -->
+      </div>
     </div>
 
     <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
@@ -83,11 +97,10 @@
     <audio class="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>
 
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
-      integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+      integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
